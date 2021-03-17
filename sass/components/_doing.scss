@@ -1,6 +1,10 @@
 .doing {
   padding-bottom: 94px;
   text-align: center;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .doing__title {

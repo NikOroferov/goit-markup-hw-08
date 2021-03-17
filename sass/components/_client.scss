@@ -1,7 +1,10 @@
 .client {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
 .client__title {
@@ -9,20 +12,43 @@
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 28px;
+  line-height: 1.179;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.2;
+  }
 }
 
 .client__list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 
-  margin-top: 50px;
+  margin-left: calc(-1 * var(--element-gap));
 }
 
-.client__item:hover {
-  fill: var(--accent-color);
-  border-color: var(--accent-color);
+.client__item{
+  margin-left: var(--element-gap);
+  margin-top: var(--element-gap);
+  flex-basis: calc(100% / 2 - var(--element-gap));
+
+  @media screen and (min-width: 768px){
+    flex-basis: calc(100% / 3 - var(--element-gap));
+    margin-top: var(--element-gap);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: var(--element-gap);
+    flex-basis: calc(100% / 6 - var(--element-gap));
+  
+    margin-top: 50px;
+  }
+
+  &:hover {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
 }
 
 .client__link {
@@ -30,7 +56,6 @@
   justify-content: center;
   align-items: center;
 
-  width: 170px;
   height: 90px;
 
   border: 1px solid rgba(175, 177, 184, 1);
