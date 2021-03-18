@@ -1,22 +1,10 @@
-.header {
-  width: 100%;
-
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  @media (min-width: 1200px) {
-    border-bottom: 1px solid rgba(236, 236, 236, 1);
-  }
+.header__container {
+  display: flex;
+  align-items: center;
 }
 
-.site-nav {
-  display: none;
-
-  @media (min-width: 768px) {
-    display: block;
-  }
+.header {
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
 
 .site-nav__list {
@@ -104,33 +92,18 @@
 }
 
 .contact {
-  display: none;
-
-  @media (min-width: 768px) {
-    display: block;
-  }
-
-  @media (min-width: 1200px) {
-    display: flex;
-    margin-left: auto;
-  }
+  display: flex;
+  margin-left: auto;
 }
 
-.contact__item {
-  &:not(:first-child) {
-    @media (min-width: 768px) and (max-width: 1199px) {
-      margin-top: 10px;
-    }
-  }
-
-  &:not(:last-child) {
-    @media (min-width: 1200px) {
-      margin-right: 50px;
-    }
-  }
+.contact__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contact__link {
+  display: flex;
+  align-items: center;
+
   color: var(--primary-color-text);
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -140,9 +113,6 @@
   letter-spacing: 0.02em;
   fill: var(--primary-color-text);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  display: flex;
-  align-items: center;
 
   &:hover,
   &:focus {
@@ -154,22 +124,4 @@
 
 .contact__icon {
   margin-right: 10px;
-}
-
-.header-menu__btn {
-  margin-left: auto;
-
-  fill: black;
-  background-color: transparent;
-  border-color: transparent;
-
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-    outline: transparent;
-  }
-
-  @media (min-width: 768px) {
-    display: none;
-  }
 }

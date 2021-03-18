@@ -1,5 +1,4 @@
 .logo {
-  margin-right: 95px;
   display: flex;
 
   font-family: Raleway, sans-serif;
@@ -19,5 +18,15 @@
 
   &__third {
     color: var(--white);
+  }
+
+  &--head {
+    @media (min-width: 1200px) {
+      margin-right: 88px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-right: 95px;
+    }
   }
 }
