@@ -115,6 +115,16 @@ img {
   }
 }
 
+.logo--foot {
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .logo--foot {
+    margin: 0;
+  }
+}
+
 .header {
   width: 100%;
 }
@@ -789,8 +799,7 @@ img {
 }
 
 .footer {
-  padding-top: 64px;
-  padding-bottom: 54px;
+  padding: 60px 0;
   background: var(--secondary-bcg-color);
 }
 
@@ -798,9 +807,58 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .footer .container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer .container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+.address-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .address-box {
+    margin-right: 70px;
+    text-align: left;
+  }
 }
 
 .address {
@@ -815,7 +873,7 @@ img {
 
 .address__list,
 .address__item:not(:first-child) {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .address__contact {
@@ -835,7 +893,20 @@ img {
 }
 
 .join {
-  margin-left: 70px;
+  margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .join {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .join {
+    margin-top: 0;
+    margin-right: 95px;
+  }
 }
 
 .join__title {
@@ -847,10 +918,36 @@ img {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .join__title {
+    text-align: left;
+  }
 }
 
 .subscribe {
-  margin-left: 95px;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .subscribe {
+    margin-top: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
 }
 
 .subscribe__label {
@@ -869,17 +966,32 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 20px;
+}
+
+@media (min-width: 1200px) {
+  .subscribe__group {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .subscribe__input {
   display: inline-block;
   height: 50px;
-  width: 350px;
+  width: 450px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding: 15px;
-  margin-right: 15px;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -914,6 +1026,12 @@ img {
   color: var(--white);
 }
 
+@media (min-width: 1200px) {
+  .subscribe__input {
+    width: 350px;
+  }
+}
+
 .subscribe__btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -925,6 +1043,7 @@ img {
   border: transparent;
   border-radius: 4px;
   padding: 10px 30px;
+  margin-top: 20px;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -946,6 +1065,13 @@ img {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   outline: transparent;
+}
+
+@media (min-width: 1200px) {
+  .subscribe__btn {
+    margin-top: 0;
+    margin-left: 10px;
+  }
 }
 
 .subscibe__icon {
