@@ -1,17 +1,41 @@
 .main-portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+  
+  @media (min-width: 1200px) {
+    padding: 94px 0;    
+  }
 }
 
 .filter {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px){
+    justify-content: center;
+  }
+
+  @media (min-width: 1200px){
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+.filter__item{
+  &:nth-child(2){
+    margin-bottom: 15px;
+
+    @media (min-width: 1200px){
+      margin-bottom: 0;
+    }
+  }
+  
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .filter__btn {

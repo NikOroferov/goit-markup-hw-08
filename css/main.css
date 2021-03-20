@@ -127,6 +127,7 @@ img {
 
 .header {
   width: 100%;
+  border-bottom: 1px solid #ececec;
 }
 
 .header__container {
@@ -139,12 +140,6 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-@media (min-width: 1200px) {
-  .header {
-    border-bottom: 1px solid #ececec;
-  }
 }
 
 .site-nav {
@@ -1103,11 +1098,17 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   min-height: 580px;
-  width: 530px;
+  width: 450px;
   border-radius: 4px;
   background-color: var(--white);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    width: 580px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1189,7 +1190,7 @@ img {
 }
 
 .input {
-  min-width: 450px;
+  min-width: 370px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding: 12px 12px 12px 42px;
@@ -1209,6 +1210,12 @@ img {
   fill: var(--accent-color);
   border-color: var(--accent-color);
   outline: none;
+}
+
+@media (min-width: 1200px) {
+  .input {
+    min-width: 450px;
+  }
 }
 
 .input__icon {
@@ -1269,9 +1276,16 @@ img {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
+}
+
+@media (min-width: 1200px) {
+  .check__label {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .check__icon {
@@ -1326,18 +1340,56 @@ img {
 }
 
 .main-portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+}
+
+@media (min-width: 1200px) {
+  .main-portfolio {
+    padding: 94px 0;
+  }
 }
 
 .filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+.filter__item:nth-child(2) {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 1200px) {
+  .filter__item:nth-child(2) {
+    margin-bottom: 0;
+  }
 }
 
 .filter__item:not(:last-child) {
@@ -1388,8 +1440,8 @@ img {
   overflow: hidden;
   margin-top: var(--cards-gap);
   margin-left: var(--cards-gap);
-  -ms-flex-preferred-size: calc(100% / 3 - var(--cards-gap));
-      flex-basis: calc(100% / 3 - var(--cards-gap));
+  -ms-flex-preferred-size: calc(100% / 1 - var(--cards-gap));
+      flex-basis: calc(100% / 1 - var(--cards-gap));
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1401,9 +1453,28 @@ img {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+@media (min-width: 768px) {
+  .card__item {
+    -ms-flex-preferred-size: calc(100% / 2 - var(--cards-gap));
+        flex-basis: calc(100% / 2 - var(--cards-gap));
+  }
+}
+
+@media (min-width: 1200px) {
+  .card__item {
+    -ms-flex-preferred-size: calc(100% / 3 - var(--cards-gap));
+        flex-basis: calc(100% / 3 - var(--cards-gap));
+  }
+}
+
 .card__thumb {
   position: relative;
   overflow: hidden;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
 }
 
 .thumb__sign {
@@ -1443,6 +1514,12 @@ img {
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .card__item:first-child .cards__box {
+    padding-bottom: 54px;
+  }
 }
 
 .cards__title {
