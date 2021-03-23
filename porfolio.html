@@ -59,7 +59,7 @@
                     </a>
                 </li>
             </ul>
-            <button type="submit" class="header-menu__btn">
+            <button type="submit" class="header-menu__btn js-open-menu">
                 <svg width="40" height="40">
                     <use href="./img/symbol-defs.svg#icon-menu"></use>
                 </svg>
@@ -359,8 +359,8 @@
             </form>
         </div>
     </footer>
-    <div class="modal-menu is-hidden">
-        <button type="submit" class="modal-menu__btn">
+    <div class="modal-menu js-menu-container" id="mobile-menu">
+        <button type="submit" class="modal-menu__btn js-close-menu">
             <svg width="40" height="40">
                 <use href="./img/symbol-defs.svg#icon-close"></use>
             </svg>
@@ -407,5 +407,9 @@
             </li>
         </ul>
     </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
 </body>
 </html>
