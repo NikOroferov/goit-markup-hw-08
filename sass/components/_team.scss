@@ -26,9 +26,8 @@
 }
 
 .team__list {
-  margin-top: calc(-1 * var(--element-gap));
-
   @media screen and (min-width: 768px) {
+    margin-top: calc(-1 * var(--element-gap));
     margin-left: calc(-1 * var(--element-gap));
     display: flex;
     flex-wrap: wrap;

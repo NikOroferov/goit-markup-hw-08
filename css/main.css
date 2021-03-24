@@ -582,12 +582,9 @@ img {
   }
 }
 
-.team__list {
-  margin-top: calc(-1 * var(--element-gap));
-}
-
 @media screen and (min-width: 768px) {
   .team__list {
+    margin-top: calc(-1 * var(--element-gap));
     margin-left: calc(-1 * var(--element-gap));
     display: -webkit-box;
     display: -ms-flexbox;
